@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-base.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Lista de Tarefas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="lista__tarefas">
+                    <h2>Lista de Tarefas</h2>
+                    <div class="d-flex align-items-center ">
+                        <input type="text" class="input__tarefas">
+                        <a href="#" class="btn btn__tarefas">Adicionar Tarefa</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <ul class="list tarefas">
+                            <li>Tarefa 1 <a href="#" class="btn">Apagar</a></li>
+                            <li>Fazer Café <a href="#" class="btn">Apagar</a></li>
+                            <li>Criar Nova Tarefa <a href="#" class="btn">Apagar</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let resultadoInput = document.querySelector('.input__tarefas');
+        let btnAdicionaTarefa = document.querySelector('.btn__tarefas');
+        let listaTarefas = document.querySelector('.tarefas');
+        let listaVisivel = true;
+
+        function criaLi() {
+            let li = document.createElement('li');
+            return li;
+        }
+
+
+        function criarTarefa(textoInput) {
+            let li = criaLi();
+            li.innerHTML = textoInput;
+            listaTarefas.appendChild(li);
+        }
+
+        btnAdicionaTarefa.addEventListener('click', function () {
+            if (resultadoInput.value == '') {
+                alert('Digite um valor Válido');
+            }
+            criarTarefa(resultadoInput.value);
+
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
