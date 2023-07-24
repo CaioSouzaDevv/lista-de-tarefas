@@ -22,9 +22,7 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <ul class="list tarefas">
-                            <li>Tarefa 1 <a href="#" class="btn">Apagar</a></li>
-                            <li>Fazer Café <a href="#" class="btn">Apagar</a></li>
-                            <li>Criar Nova Tarefa <a href="#" class="btn">Apagar</a></li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -33,38 +31,7 @@
         </div>
     </div>
 
-    <script>
-
-        let resultadoInput = document.querySelector('.input__tarefas');
-        let btnAdicionaTarefa = document.querySelector('.btn__tarefas');
-        let listaTarefas = document.querySelector('.tarefas');
-        let listaVisivel = true;
-
-        function criaLi() {
-            let li = document.createElement('li');
-            return li;
-        }
-
-
-        function criarTarefa(textoInput) {
-            let li = criaLi();
-            li.innerHTML = textoInput;
-            listaTarefas.appendChild(li);
-        }
-
-        btnAdicionaTarefa.addEventListener('click', function () {
-            if (resultadoInput.value == '') {
-                alert('Digite um valor Válido');
-            }
-            criarTarefa(resultadoInput.value);
-
-
-        });
-
-
-
-    </script>
-
+   <script src="javascript/script.js"></script>
 </body>
 
 </html>
